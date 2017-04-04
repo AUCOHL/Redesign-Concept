@@ -3,3 +3,36 @@
     background-image: url(../Images/cloudl.png), url(../Images/cloudr.png);
     color: white;
 }
+
+.updatesSection, aside {
+    background: #192426;
+    box-shadow: 0 0 16px rgba(0,0,0,0.2);
+}
+
+.commitGraph {
+    background: #1f2b2e;
+}
+
+.commitGraph polygon {
+    fill: #1f2b2e;
+}
+
+.commitGraph line {
+    stroke: #333;
+    stroke-width: 1;
+}
+
+.repoMain {
+    background: #192426;
+}
+
+.updatesSection > div > div, aside > div > div {
+    background: #1f2b2e;
+    color: #ddd;
+}
+
+button.alt {
+    border: 2px solid #eee;
+    background: none;
+    color: #eee;
+}

@@ -2,3 +2,35 @@
     background-color: #eee;
     background-image: url(../Images/cloudldark.png), url(../Images/cloudrdark.png);
 }
+
+.updatesSection, aside, {
+    background: #f3f3f3;
+    box-shadow: 0 0 16px rgba(0,0,0,0.1);
+}
+
+.repository {
+    background: #e9e9e9;
+    box-shadow: 0 0 16px rgba(0,0,0,0.1);
+}
+
+.commitGraph {
+    background: #e9e9e9;
+}
+
+.commitGraph polygon {
+    fill: #f3f3f3;
+}
+
+.commitGraph line {
+    stroke: #ccc;
+    stroke-width: 1;
+}
+
+.repoMain {
+    background: #f3f3f3;
+}
+
+.updatesSection > div > div, aside > div > div {
+    background: #e9e9e9;
+    color: #333;
+}

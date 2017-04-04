@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cloud V</title>
+        <link rel="stylesheet" type="text/css" href="Styles/style.css"></link>
+        <link rel="stylesheet" type="text/css" href="Styles/light.css"></link>
+    </head>
+    <body class='cloudy'>
+        <header><img src='Images/xxxs.png' /></header>
+        <main>
+            <section class='repository'>
+                <div class='repoHeader'><div class="icon"></div><h2><a href=''>Skyus</a>/Barrel Shifter</h2></div>
+                <svg class="commitGraph" viewBox ="0 0 100 100" preserveAspectRatio="none">
+                    <line x1="0" y1="20" x2="100" y2="20" />
+                    <line x1="0" y1="40" x2="100" y2="40" />
+                    <line x1="0" y1="60" x2="100" y2="60" />
+                    <line x1="0" y1="80" x2="100" y2="80" />
+                    <polygon points="0,100 20,0 40,10 60,75, 80,25 100,100"/>
+                </svg><div class='repoMain'>
+                    <h3>RiscBEE</h3>
+
+                    <p>A Barry good RISC-V RV32i Verilog implementation.
+
+                    (You can blame @KarimIO for the name and the slogan.)
+
+                    It's a single-cycle RISC-V CPU with completely unaligned byte-addressable memory I/O.
+
+                    (Though the program ROM is only word addressable and so is memory-mapped I/O).
+
+                    The Core and parts of the Computer are platform-agnostic, but the final product was implemented on a Xilinx Nexys 3 FPGA.</p>
+
+                    <p>RiscBEE is a sister project of Oak.js.</p>
+
+                    <h3>Usage</h3>
+
+                    <p>You can generate machine code with Oak.js.</p>
+
+                    <h3>Simulators</h3>
+
+                    <p>For all simulators, you just wanna use the files in Core. Simulate CPU_tb.v.</p>
+
+                    <h4>CloudV</h4>
+
+                    <p>CloudV is a cloud-based simulator and (WIP synthesizer) our CSCE department is working on. To use it, upload all files in Core and comment out all `include statements, then simulate CPU_tb.v.</p>
+
+                    <h3>FPGA Toolchains</h3>
+
+                    <p>Comment out all `include statements.</p>
+
+                    <h4>Xilinx ISE</h4>
+
+                    <p>Comment out all `include statements, pool all files in Computer, Core and Xilinx FPGA-specific.
+
+                    You will want to create a ucf file, as well.
+
+                    To create a coe file easily, you can use the file Scripts/xilinxcoe.js.</p>
+
+                    <h4>Other</h4>
+
+                    <p>Not sure what you should do about the `include statements, but you want to use Computer, Core and modify Xilinx FPGA-specific code to code that interfaces with your FPGA's memory resources and I/O.</p>
+
+                    <h3>License</h3>
+
+                    <p>Mozilla Public License 2.0. Check 'LICENSE'.</p>
+                </div>
+            </section>
+        </main> 
+    </body>
+</html>
