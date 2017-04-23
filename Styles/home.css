@@ -1,24 +1,28 @@
 .heroImage {
-    padding: 0 5%;
     padding-top: 32px;
     background-color: #141d1f;
+    color: #ffffff;
     background-image: url(../Images/cloudl.png), url(../Images/cloudr.png);
     background-repeat: no-repeat;
     background-position: bottom left, top right;
     position: relative;
+    text-align: center;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    bottom: 0;
 }
 
-.heroImage > div {
-    width: 100%;
+.showcase {
+    display: inline-block;
     height: 100%;
-    position: relative;
+    vertical-align: middle;
 }
 
 .showcaseMain {
-    vertical-align: top;
     display: inline-block;
+    vertical-align: middle;
     width: 80%;
-    text-align: center;
 }
 
 .showcaseMain img {
@@ -29,23 +33,14 @@
 }
 
 .showcaseSide {
-    position: absolute;
-    vertical-align: top;
-    right: 0;
+    display: inline-block;
+    vertical-align: middle;
     width: 20%;
-    display:flex;
-    height: 100%;
-    align-items:center;
-    box-shadow: border-box;
-    bottom: 0;
-    color: white;
 }
 
 .showcaseSide div {
-    width: 100%;
-    display: inline-block;
-    vertical-align: middle;
-    text-align: center;
+    width: 80%;
+    margin: 5% 5%;
 }
 
 .comingSoon {
@@ -54,12 +49,12 @@
 }
 
 .featuresBar {
-    display: block;
     position: relative;
     z-index: 2;
     box-shadow: 0 0 32px black;
     width: 90%;
     padding: 0 5%;
+    vertical-align: bottom;
 
     background: rgba(219,234,238,1);
     background: -moz-linear-gradient(left, rgba(219,234,238,1) 0%, rgba(181,197,201,1) 50%, rgba(219,234,238,1) 100%);
@@ -86,4 +81,15 @@ button {
     width: 100%;
     padding: 8%;
     margin: 6% 0;
+}
+
+.avatar {
+    display: inline-block;
+    position: relative;
+
+    width: 64px;
+    height: 64px;
+
+    border-radius: 50%;
+    box-shadow:  0 0 32px black, 0 -2px 2px rgba(0,0,0,0.2), 0 2px 2px rgba(255,255,255,0.2);
 }
