@@ -9,14 +9,40 @@
         <header><img src='Images/xxxs.png' /></header>
         <main>
             <section class='repository'>
-                <div class='repoHeader'><div class="icon"></div><h2><a href=''>Skyus</a>/Barrel Shifter</h2></div>
-                <svg class="commitGraph" viewBox ="0 0 100 100" preserveAspectRatio="none">
-                    <line x1="0" y1="20" x2="100" y2="20" />
-                    <line x1="0" y1="40" x2="100" y2="40" />
-                    <line x1="0" y1="60" x2="100" y2="60" />
-                    <line x1="0" y1="80" x2="100" y2="80" />
-                    <polygon points="0,100 20,0 40,10 60,75, 80,25 100,100"/>
-                </svg><div class='repoMain'>
+                <div class='repoHeader'>
+                    <button>Clone</button>
+                    <button class='alt'>Download</button>
+                    <div class="icon"></div>
+                    <h2><a href=''>Skyus</a>/RiscBEE</h2>
+                    <div class='collaborators'>
+                        <div style='background-image: url(User/1.jpg);'></div><div style='background-image: url(User/2.png);' class='owner'></div>
+                    </div>
+                    <p>A Barry good RISC-V RV32i Verilog implementation.</p>
+                </div>
+                <div class="commitGraph">
+                    <div style='left: 20%; top: 20%;'><span>+1043 lines</span></div>
+                    <div style='left: 40%; top: 30%;'><span>+886 lines</span></div>
+                    <div style='left: 60%; top: 75%;'><span>+412 lines</span></div>
+                    <div style='left: 80%; top: 25%;'><span>+952 lines</span></div>
+                    <svg viewBox="0 0 100 100" preserveAspectRatio="none">
+                        <filter id="dropshadow" height="120%">
+                            <feGaussianBlur in="SourceAlpha" stdDeviation="1.5" result="blur" />
+                            <feOffset in="blur" dx="0" dy="-2" result="offsetblur" />
+                            <feComponentTransfer xmlns="http://www.w3.org/2000/svg">
+                                <feFuncA type="linear" slope="0.2"/>
+                            </feComponentTransfer>
+                            <feMerge>
+                                <feMergeNode />
+                                <feMergeNode in="SourceGraphic" />
+                            </feMerge>
+                        </filter>
+                        <line x1="0" y1="20" x2="100" y2="20" />
+                        <line x1="0" y1="40" x2="100" y2="40" />
+                        <line x1="0" y1="60" x2="100" y2="60" />
+                        <line x1="0" y1="80" x2="100" y2="80" />
+                        <polygon points="0,100 20,20 40,30 60,75, 80,25 100,25 100,100">
+                    </svg>
+                </div><div class='repoMain'>
                     <h3>RiscBEE</h3>
 
                     <p>A Barry good RISC-V RV32i Verilog implementation.
@@ -65,5 +91,6 @@
                 </div>
             </section>
         </main> 
+        <script src="Scripts/frontend.js"></script>
     </body>
 </html>

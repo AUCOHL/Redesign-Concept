@@ -1,16 +1,21 @@
+header.scrolled {
+    background: #1f2b2e;
+    box-shadow: 0 0 32px black;
+}
+
 .cloudy {
-    background-color: #eee;
+    background-color: #e2e2e2;
     background-image: url(../Images/cloudldark.png), url(../Images/cloudrdark.png);
 }
 
-.updatesSection, aside, {
+.updatesSection, aside {
     background: #f3f3f3;
-    box-shadow: 0 0 16px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 16px rgba(0,0,0,0.2);
 }
 
 .repository {
     background: #e9e9e9;
-    box-shadow: 0 0 16px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 16px rgba(0,0,0,0.2);
 }
 
 .commitGraph {
@@ -19,6 +24,7 @@
 
 .commitGraph polygon {
     fill: #f3f3f3;
+    filter: url(#dropshadow);
 }
 
 .commitGraph line {

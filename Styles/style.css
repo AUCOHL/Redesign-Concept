@@ -16,6 +16,7 @@ header {
     box-sizing: border-box;
     padding: none;
     margin: none;
+    transition: all 0.5s ease;
 }
 
 .fourofour {
@@ -32,6 +33,7 @@ header {
 .cloudy {
     background-repeat: no-repeat;
     background-position: bottom left, top right;
+    background-attachment: fixed;
 }
 
 .fourofour > div {
@@ -155,6 +157,15 @@ aside {
     float: right;
 }
 
+.repoHeader button {
+    font-family: Calibri;
+    width: auto;
+    margin-left: 0.2em;
+    padding: 0.5em;
+    font-size: 90%;
+    float: right;
+}
+
 a {
     color: #2f8096;
 }
@@ -180,9 +191,17 @@ a {
 }
 
 .commitGraph {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    height: 96px;
+}
+
+.commitGraph > svg {
     height: 96px;
     width: 100%;
     padding: 0;
+    margin: 0;
 }
 
 .repository > h2 {
@@ -198,4 +217,84 @@ a {
     margin-left: 0;
     background: #999;
     float: left;
+}
+
+.tags > span {
+    float: right;
+    margin: 4px;
+    padding: 4px;
+    font-size: 70%;
+    border-radius: 4px;
+    border: 2px solid #2f8096;
+    font-family: Calibri;
+    color: #2f8096;
+}
+
+.collaborators {
+    float: right;
+}
+
+.collaborators > div {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin: 4px;
+    background-position: center;
+    background-size: cover;
+}
+
+.collaborators .owner {
+    box-shadow: 0 0 8px #2f8096;
+}
+
+.collaborators div {
+    transition: 0.2s ease transform, 0.2s ease box-shadow;
+    box-shadow: 0 0 0 0px rgba(0,0,0,0.1);
+}
+
+.collaborators div:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 0 4px rgba(0,0,0,0.1);
+    z-index: 1;
+}
+
+.commitGraph > div {
+    position: absolute;
+    margin-left: -0.8em;
+    margin-top: -0.8em;
+    background: #333;
+    width: 1.6em;
+    height: 1.6em;
+    border-radius: 1.2em;
+    font-size: 90%;
+    overflow: hidden;
+    color: white;
+    box-sizing: border-box;
+    word-break: keep-all;
+    transition: width 0.4s ease;
+}
+
+.commitGraph span {
+    padding: 0.2em;
+    margin-left: 1.6em;
+    display: inline-block;
+    word-break: keep-all;
+}
+
+.commitGraph > div:hover {
+    width: 8em;
+}
+
+.commitGraph > div:before {
+    content: '';
+    position: absolute;
+    left: 0.3em;
+    top: 0.3em;
+    border-radius: 50%;
+    background: white;
+    width: 1.0em;
+    height: 1.0em;
+    vertical-align: top;
+    margin-right: 8px;
 }
