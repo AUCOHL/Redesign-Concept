@@ -1,6 +1,18 @@
-header.scrolled {
-    background: #1f2b2e;
-    box-shadow: 0 0 32px black;
+header {
+    background: #eee;
+    border-bottom: 4px solid #2f8096;
+}
+
+.headRight > div {
+    transition: border-bottom 0.5s ease;
+}
+
+.headRight > div {
+    border-bottom: 4px solid transparent;
+}
+
+.headRight > div:hover {
+    border-bottom: 4px solid #69c5df;
 }
 
 .cloudy {

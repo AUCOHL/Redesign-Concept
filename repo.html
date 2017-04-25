@@ -6,12 +6,27 @@
         <link rel="stylesheet" type="text/css" href="Styles/light.css"></link>
     </head>
     <body class='cloudy'>
-        <header><img src='Images/xxxs.png' /></header>
+        <header>
+            <img src='Images/xxxs.png' />
+            <div class='headRight'>
+                <div class='search'>
+                    <input />
+                </div><div class='avatar'>
+                    <div style='background-image: url(User/1.jpg);'>
+                </div>
+            </div>
+        </header>
         <main>
             <section class='repository'>
                 <div class='repoHeader'>
-                    <button>Clone</button>
-                    <button class='alt'>Download</button>
+                    <div class='dropdown'>
+                        <button>Workspace</button>
+                        <ul>
+                            <li>Clone</li>
+                            <li>Clone</li>
+                            <li>Settings</li>
+                        </ul>
+                    </div><button class='alt'>Download</button>
                     <div class="icon"></div>
                     <h2><a href=''>Skyus</a>/RiscBEE</h2>
                     <div class='collaborators'>
@@ -20,14 +35,14 @@
                     <p>A Barry good RISC-V RV32i Verilog implementation.</p>
                 </div>
                 <div class="commitGraph">
-                    <div style='left: 20%; top: 20%;'><span>+1043 lines</span></div>
-                    <div style='left: 40%; top: 30%;'><span>+886 lines</span></div>
-                    <div style='left: 60%; top: 75%;'><span>+412 lines</span></div>
-                    <div style='left: 80%; top: 25%;'><span>+952 lines</span></div>
+                    <div style='left: 20%; top: 20%;'><span><b>1/17</b> - 1043 lines</span></div>
+                    <div style='left: 40%; top: 30%;'><span><b>2/17</b> - 886 lines</span></div>
+                    <div style='left: 60%; top: 75%;'><span><b>3/17</b> - 412 lines</span></div>
+                    <div style='left: 80%; top: 25%;'><span><b>4/17</b> - 952 lines</span></div>
                     <svg viewBox="0 0 100 100" preserveAspectRatio="none">
-                        <filter id="dropshadow" height="120%">
-                            <feGaussianBlur in="SourceAlpha" stdDeviation="1.5" result="blur" />
-                            <feOffset in="blur" dx="0" dy="-2" result="offsetblur" />
+                        <filter id="dropshadow" height="140%">
+                            <feGaussianBlur in="SourceAlpha" stdDeviation="3.0" result="blur" />
+                            <feOffset in="blur" dx="0" dy="-3" result="offsetblur" />
                             <feComponentTransfer xmlns="http://www.w3.org/2000/svg">
                                 <feFuncA type="linear" slope="0.2"/>
                             </feComponentTransfer>
