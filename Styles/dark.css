@@ -1,6 +1,15 @@
-header.scrolled {
-    background: #1f2b2e;
-    box-shadow: 0 0 32px black;
+header {
+    background: #192426;
+    border-bottom: 4px solid #2f8096;
+}
+
+header .headRight input {
+    background-color: #4b5557;
+    color: white;
+}
+
+header .avatar {
+    border-left: 1px solid #354042;
 }
 
 .cloudy {

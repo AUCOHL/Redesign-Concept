@@ -26,11 +26,29 @@ header .headRight {
     box-shadow: 0 0 16px rgba(0,0,0,0.2);
 }
 
+header .headRight > div {
+    position: relative;
+}
+
+header .headRight > div .back {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: #2f8096;
+    transition: height 0.3s ease, background-color 0.3s ease;
+}
+
+header .headRight > div:hover .back {
+    height: 100%;
+    background: #69c5df;
+}
+
 header .search {
     display: inline-block;
     height: 60px;
     vertical-align: top;
-    border-left: 1px solid #ccc;
 }
 
 header .headRight input {
@@ -39,6 +57,9 @@ header .headRight input {
     height: 30px;
     box-shadow: 15px;
     padding: 12px;
+    padding-left: 30px;
+    padding-right: 0;
+    overflow: hidden;
     margin: 15px;
     border-radius: 15px;
     border: none;
@@ -46,10 +67,18 @@ header .headRight input {
     transition: 0.5s ease width;
     outline: none;
     color: #666;
+    background: white;
+    background-image: url('../Images/search.png');
+    background-position: 8px 8px;
+    background-size: 15px;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
 }
 
 header .headRight input:focus {
     width: 8em;
+    padding-right: 12px;
 }
 
 header .avatar {
@@ -59,13 +88,15 @@ header .avatar {
     border-left: 1px solid #ccc;
 }
 
-header .avatar div {
+header .avatarImg {
     width: 50%;
     height: 50%;
     margin: 25%;
     border-radius: 50%;
     background-size: cover;
     background-position: center;
+    position: relative;
+    z-index: 1;
 }
 
 .fourofour {
