@@ -16,6 +16,87 @@ header {
     box-sizing: border-box;
     padding: none;
     margin: none;
+    transition: all 0.5s ease;
+}
+
+header .headRight {
+    float: right;
+    width: auto;
+    height: 60px;
+    box-shadow: 0 0 16px rgba(0,0,0,0.2);
+}
+
+header .headRight > div {
+    position: relative;
+}
+
+header .headRight > div .back {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: #2f8096;
+    transition: height 0.3s ease, background-color 0.3s ease;
+}
+
+header .headRight > div:hover .back {
+    height: 100%;
+    background: #69c5df;
+}
+
+header .search {
+    display: inline-block;
+    height: 60px;
+    vertical-align: top;
+}
+
+header .headRight input {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    box-shadow: 15px;
+    padding: 12px;
+    padding-left: 30px;
+    padding-right: 0;
+    overflow: hidden;
+    margin: 15px;
+    border-radius: 15px;
+    border: none;
+    box-sizing: border-box;
+    transition: 0.5s ease width;
+    outline: none;
+    color: #666;
+    background: white;
+    background-image: url('../Images/search.png');
+    background-position: 8px 8px;
+    background-size: 15px;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+}
+
+header .headRight input:focus {
+    width: 8em;
+    padding-right: 12px;
+}
+
+header .avatar {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    border-left: 1px solid #ccc;
+}
+
+header .avatarImg {
+    width: 50%;
+    height: 50%;
+    margin: 25%;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
 }
 
 .fourofour {
@@ -32,6 +113,7 @@ header {
 .cloudy {
     background-repeat: no-repeat;
     background-position: bottom left, top right;
+    background-attachment: fixed;
 }
 
 .fourofour > div {
@@ -52,9 +134,13 @@ main {
     min-height: 100%;
 }
 
+.dropdown {
+    display: inline-block;
+}
+
 button {
     background: #2f8096;
-    border: 2px solid #2f8096;
+    border: 2px solid #1f5563;
     box-sizing: border-box;
     font-size: 120%;
     border-radius: 4px;
@@ -71,6 +157,7 @@ button.alt {
     border: 2px solid #333;
     background: none;
     color: #333;
+    box-shadow: none;
 }
 
 button:hover {
@@ -125,7 +212,7 @@ td.text {
     vertical-align: top;
     width: 66%;
     margin: 1%;
-    margin-top: 64px;
+    margin-top: 80px;
     padding: 1%;
     border-radius: 6px;
 }
@@ -135,7 +222,7 @@ aside {
     vertical-align: top;
     width: 26%;
     margin: 1%;
-    margin-top: 64px;
+    margin-top: 80px;
     padding: 1%;
     border-radius: 6px;
 }
@@ -165,10 +252,76 @@ aside {
 .updatesSection > div > div button, aside > div > div button {
     font-family: Calibri;
     width: auto;
-    margin-left: 0.2em;
+    margin: 0;
     padding: 0.5em;
     font-size: 90%;
     float: right;
+}
+
+.repoHeader > button, .repoHeader > .dropdown {
+    margin-left: 0.2em;
+    float: right;
+    font-family: Calibri;
+}
+
+.repoHeader button {
+    font-family: Calibri;
+    width: auto;
+    padding: 0.8em 1.2em;
+    font-size: 80%;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown button {
+    padding-right: 3em;
+}
+
+.dropdown button:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.8em;
+    height: 100%;
+    box-sizing: border-box;
+    content: 'V';
+    border-left: 2px solid #1f5563;
+}
+
+.dropdown ul {
+    position: absolute;
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+    box-sizing: border-box;
+    background: #2f8096;
+    font-size: 80%;
+    display: none;
+    border-radius: 0 0 4px 4px;
+    overflow: hidden;
+    color: white;
+}
+
+.dropdown:hover button {
+    border-radius: 4px 4px 0 0;
+    box-shadow: inset 0 -2px 0 0 transparent;
+}
+
+.dropdown:hover ul {
+    display: block;
+}
+
+.dropdown li {
+    padding: 1.0em;
+    margin: 0;
+}
+
+.dropdown li:hover {
+    background: #1f5563;
 }
 
 a {
@@ -182,7 +335,7 @@ a:link {
 .repository {
     width: 80%;
     margin: 0 10%;
-    margin-top: 64px;
+    margin-top: 80px;
     padding: 0;
     display: inline-block;
     border-radius: 8px;
@@ -191,18 +344,26 @@ a:link {
 }
 
 .repoHeader {
-    padding: 1em;
+    padding: 2.5em;
 }
 
 .repoMain {
     margin-top: -8px;
-    padding: 1.5em;
+    padding: 2.5em;
 }
 
 .commitGraph {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    height: 96px;
+}
+
+.commitGraph > svg {
     height: 96px;
     width: 100%;
     padding: 0;
+    margin: 0;
 }
 
 .repository > h2 {
@@ -228,4 +389,88 @@ a:link {
     margin-left: 0;
     margin-right: 0;
     text-align: left;
+}
+
+.tags > span {
+    float: right;
+    margin: 4px;
+    padding: 4px;
+    font-size: 70%;
+    border-radius: 4px;
+    border: 2px solid #2f8096;
+    font-family: Calibri;
+    color: #2f8096;
+}
+
+.collaborators {
+    float: right;
+}
+
+.collaborators > div {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin: 8px 8px 0 0;
+    background-position: center;
+    background-size: cover;
+}
+
+.collaborators .owner {
+    box-shadow: 0 0 8px #2f8096;
+}
+
+.collaborators div {
+    transition: 0.2s ease transform, 0.2s ease box-shadow;
+    box-shadow: 0 0 0 0px rgba(0,0,0,0.1);
+}
+
+.collaborators div:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 0 4px rgba(0,0,0,0.1);
+    z-index: 1;
+}
+
+.commitGraph > div {
+    position: absolute;
+    margin-left: -0.8em;
+    margin-top: -0.8em;
+    background: #333;
+    width: 1.6em;
+    height: 1.6em;
+    border-radius: 1.2em;
+    font-size: 90%;
+    overflow: hidden;
+    color: white;
+    box-sizing: border-box;
+    transition: width 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 0 0 rgba(0,0,0,0.4);
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.commitGraph span {
+    width: 10em;
+    padding: 0.2em;
+    margin-left: 1.6em;
+    display: inline-block;
+    box-sizing: border-box;
+    word-break: keep-all;
+}
+
+.commitGraph > div:hover {
+    width: 10em;
+    box-shadow: 0 0 0 2px rgba(0,0,0,0.2), 0 0 8px 2px rgba(0,0,0,0.4);
+}
+
+.commitGraph > div:before {
+    content: '';
+    position: absolute;
+    left: 0.3em;
+    top: 0.3em;
+    border-radius: 50%;
+    background: white;
+    width: 1.0em;
+    height: 1.0em;
+    vertical-align: top;
+    margin-right: 8px;
 }

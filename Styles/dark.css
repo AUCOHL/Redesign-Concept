@@ -1,3 +1,17 @@
+header {
+    background: #192426;
+    border-bottom: 4px solid #2f8096;
+}
+
+header .headRight input {
+    background-color: #4b5557;
+    color: white;
+}
+
+header .avatar {
+    border-left: 1px solid #354042;
+}
+
 .cloudy {
     background-color: #141d1f;
     background-image: url(../Images/cloudl.png), url(../Images/cloudr.png);
@@ -9,16 +23,21 @@
     box-shadow: 0 0 16px rgba(0,0,0,0.2);
 }
 
+.repository {
+    background: #1f2b2e;
+    box-shadow: 0 0 16px rgba(0,0,0,0.2);
+}
+
 .commitGraph {
     background: #1f2b2e;
 }
 
 .commitGraph polygon {
-    fill: #1f2b2e;
+    fill: #192426;
 }
 
 .commitGraph line {
-    stroke: #333;
+    stroke: #4b5557;
     stroke-width: 1;
 }
 
