@@ -8,6 +8,21 @@ body {
     background: #e9e9e9;
 }
 
+header.unscrolled {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+header.unscrolled .headRight {
+    background: none;
+    box-shadow: none;
+}
+
+header.unscrolled .headRight div {
+    border-color: transparent;
+}
+
 header {
     position: fixed;
     width: 100%;
@@ -17,6 +32,7 @@ header {
     padding: none;
     margin: none;
     transition: all 0.5s ease;
+    box-shadow: 0 1px 32px black;
 }
 
 header .headRight {
@@ -28,6 +44,7 @@ header .headRight {
 
 header .headRight > div {
     position: relative;
+    transition: border 0.5s ease;
 }
 
 header .headRight > div .back {
@@ -76,8 +93,21 @@ header .headRight input {
     z-index: 1;
 }
 
+header .headLeft {
+    position: absolute;
+    left: 232px;
+    top: 0;
+}
+
+header .headLeft a {
+    display: inline-block;
+    font-size: 1.2em;
+    padding: 20px;
+	font-family: 'HelveticaNeue', 'Helvetica', 'Calibri';
+}
+
 header .headRight input:focus {
-    width: 8em;
+    width: 15vw;
     padding-right: 12px;
 }
 
@@ -144,7 +174,7 @@ a {
 
 button {
     background: #2f8096;
-    border: 2px solid #1f5563;
+    border: 1px solid #1f5563;
     box-sizing: border-box;
     font-size: 120%;
     border-radius: 4px;
@@ -155,13 +185,14 @@ button {
     font-family: 'Caviar Dreams', 'Helvetica';
     transition: border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease;
     box-sizing: border-box;
+    box-shadow: 0 0 6px rgba(0,0,0,0.2), inset 0 -2px 2px 0 rgba(0,0,0,0.2);
 }
 
 button.alt {
-    border: 2px solid #333;
+    border: 1px solid #999;
+    box-shadow: 0 0 6px rgba(0,0,0,0.2);
     background: none;
     color: #333;
-    box-shadow: none;
 }
 
 button:hover {
@@ -170,7 +201,7 @@ button:hover {
 }
 
 button.alt:hover {
-    border: 2px solid #999;
+    border-color: #999;
     background: none;
     color: #999;
 }
@@ -353,9 +384,9 @@ a {
 .repository .icon {
     display: inline-block;
     border-radius: 50%;
-    width: 24px;
-    height: 24px;
-    margin: 8px;
+    width: 64px;
+    height: 64px;
+    margin: 12px;
     margin-left: 0;
     background: #999;
     float: left;
