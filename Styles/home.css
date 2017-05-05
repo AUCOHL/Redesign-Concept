@@ -6,6 +6,7 @@
     background-repeat: no-repeat;
     background-position: bottom left, top right;
     position: relative;
+    min-height: 100vh;
 }
 
 .heroImage > div {
