@@ -7,15 +7,15 @@
     </head>
     <body class='cloudy'>
         <header>
-            <img src='Images/xxxs.png' />
+            <a href='index.html'><img src='Images/xxxs.png' class='logo' /></a>
             <div class='headRight'>
                 <div class='search'>
                     <div class='back'></div>
                     <input placeholder='Search' />
-                </div><div class='avatar'>
+                </div><a href='myprofile.html' class='avatar'>
                     <div class='back'></div>
-                    <div class='avatarImg' style='background-image: url(User/1.jpg);'>
-                </div>
+                    <div class='avatarImg' style='background-image: url(User/1.jpg);'></div>
+                </a>
             </div>
         </header>
         <main>
@@ -26,32 +26,51 @@
                 <p>Just a rather cool description.</p>
             </section>
             <h3 class='repoHeaderText'>My Repositories</h3>
-            <section class='myRepos'>
-                <div>
-                    <div class='icon' style='background-image: url(User/2.png);'></div>
-                    <h3>Barrel Shifter</h3>
-                    <p>An even better Barrel Shifter than Donkey Kong!</p>
-                </div><div class='mid'>
-                    <div class='icon' style='background-image: url(User/2.png);'></div>
-                    <h3>RiscBee</h3>
-                    <p>A Barry good RISC-V RV32i Verilog implementation.</p>
-                </div><div>
-                    <div class='icon' style='background-image: url(User/2.png);'></div>
-                    <h3>MIPS Parallel Processor</h3>
-                    <p>Processor? I hardly even knew 'er!</p>
-                </div><div>
-                    <div class='icon' style='background-image: url(User/2.png);'></div>
-                    <h3>Parameterized ALU</h3>
-                    <p>This module uses the Parameterized Adder and Barrel Shifter to create a full ALU.</p>
-                </div><div class='mid'>
-                    <div class='icon' style='background-image: url(User/2.png);'></div>
-                    <h3>Parameterized Adder</h3>
-                    <p>Adding is the future of computation.</p>
-                </div><div>
-                    <div class='icon' style='background-image: url(User/2.png);'></div>
-                    <h3>I always loved repositories.</h3>
-                    <p>Love 'em. And my repositories? The best. Unbeatable. You won't find any better repositories. Crooked Hillary's repositories? Awful. Look at them. No meat. Sad!</p>
-                </div>
+            <div class='table myRepos'>
+                <a href='' class='tableCell'>
+                    <div class='image'>
+                        <img class='avatar' src='Images/unknown.jpg' />
+                    </div><div class='text'>
+                        <h3>Barrel Shifter</h3>
+                        <p>An even better Barrel Shifter than Donkey Kong!</p>
+                    </div>
+                </a>
+                <a href='' class='tableCell'>
+                    <div class='image'>
+                        <img class='avatar' src='Images/unknown.jpg' />
+                    </div><div class='text'>
+                        <h3>RiscBee</h3>
+                        <p>A Barry good RISC-V RV32i Verilog implementation.</p>
+                    </div>
+                </a>
+                <a href='' class='tableCell'>
+                    <div class='image'>
+                        <img class='avatar' src='Images/unknown.jpg' />
+                    </div><div class='text'>
+                        <h3>MIPS Parallel Processor</h3>
+                        <p>Processor? I hardly even knew 'er!</p>
+                    </div>
+                </a>
+            </div>
+            <div class='table myRepos'>
+                <a href='' class='tableCell'>
+                    <div class='image'>
+                        <img class='avatar' src='Images/unknown.jpg' />
+                    </div><div class='text'>
+                        <h3>Parameterized ALU</h3>
+                        <p>This module uses the Parameterized Adder and Barrel Shifter to create a full ALU.</p>
+                    </div>
+                </a>
+                <a href='' class='tableCell'>
+                    <div class='image'>
+                        <img class='avatar' src='Images/unknown.jpg' />
+                    </div><div class='text'>
+                        <h3>I always loved repositories.</h3>
+                        <p>Love 'em. And my repositories? The best. Unbeatable. You won't find any better repositories. Crooked Hillary's repositories? Awful. Look at them. No meat. Sad!</p>
+                    </div>
+                </a>
+                <div class='tableCellNone'></div>
+            </div>
             </section>
         </main><footer>
             	&#169; 2017 CloudV <a href='explore.html'>Explore</a> <a href='blog.html'>Blog</a> <a href='about.html'>About</a>
