@@ -147,7 +147,7 @@ footer a {
     bottom: 0;
 }
 
-.fourofour {
+.fourofour, .login {
     display: flex;
     align-items:center;
     box-shadow: border-box;
@@ -156,6 +156,52 @@ footer a {
     height: 100vh;
     text-align: center;
     position: relative;
+}
+
+.login > div {
+    width: 80%;
+    margin: 0 10%;
+}
+
+.login > div > form {
+    width: 48%;
+    padding: 1%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.login input {
+    background: #f3f3f3;
+    border: 1px solid #333;
+    box-sizing: border-box;
+    font-size: 120%;
+    border-radius: 4px;
+    padding: 4%;
+    margin: 1% 0;
+    width: 100%;
+    color: #333;
+    display: inline-block;
+    font-family: 'Caviar Dreams', 'Helvetica';
+    transition: border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.login input:hover {
+    background: #ddd;
+}
+
+.login input[type='submit'] {
+    background: #2f8096;
+    border: 1px solid #1f5563;
+    box-sizing: border-box;
+    color: white;
+    display: inline-block;
+    transition: border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+    box-sizing: border-box;
+    box-shadow: 0 0 6px rgba(0,0,0,0.2), inset 0 -2px 2px 0 rgba(0,0,0,0.2);
+}
+
+.login input[type='submit']:hover {
+    background: #1f5563;
 }
 
 .cloudy {
@@ -259,12 +305,21 @@ aside {
     margin-bottom: 8px;
 }
 
-.alertDiv button {
+.alertDiv button, aside button {
     border-radius: 0 4px 4px 0;
 }
 
-.alertDiv button.alt {
+.alertDiv button.alt, aside button.alt {
     border-radius: 4px 0 0 4px;
+}
+
+button > img {
+    height: 1em;
+    transition: filter 0.5s ease;
+}
+
+button.alt:hover > img {
+    filter:brightness(300%);
 }
 
 textarea {
@@ -464,6 +519,7 @@ a {
     margin-left: 0;
     background: #999;
     float: left;
+    background-size: cover;
 }
 
 .tags > span {
@@ -620,6 +676,7 @@ a {
 
 .passInput input {
     background: #f3f3f3;
+    text-align: left;
 }
 
 .passInput input:hover {
@@ -631,6 +688,7 @@ a {
     border: 1px solid #1f5563;
     box-shadow: 0 0 6px rgba(0,0,0,0.2), inset 0 -2px 2px 0 rgba(0,0,0,0.2);
     transition: background-color 0.5s ease;
+    text-align: center;
 }
 
 .passInput input[type='submit']:hover {
@@ -660,7 +718,8 @@ a {
     width: 100%;
     padding: 0.3em;
     resize: vertical;
-    border-bottom: #333 2px solid;
+    border-bottom: #333 1px solid;
+    transition: 0.5s ease box-shadow;
 }
 
 .profile textarea:hover {
@@ -673,19 +732,34 @@ a {
     padding-top: 80px;
 }
 
-.searchresults h2 {
+.searchresults h3 {
     text-align: center;
     margin: 2% 0;
 }
 
-.searchresults > input {
-    width: 100%;
-    background-color: #efefef;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+.searchresults .inputHelp {
+    display: inline-block;
     padding: 1%;
     font-size: 2em;
     box-sizing: border-box;
+    font-family: 'Calibri', 'Trebuchet MS';
+    background-color: #ddd;
+    border-radius: 8px 0 0 8px;
+    width: 6.5em;
+    margin: 0;
+}
+
+.searchresults input {
+    display: inline-block;
+    width: calc(100% - 6.5em);
+    background-color: #f3f3f3;
+    border-radius: 0 8px 8px 0;
+    padding: 1%;
+    font-size: 2em;
+    box-sizing: border-box;
+    font-family: 'Calibri', 'Trebuchet MS';
+    border: none;
+    margin: 0;
 }
 
 .searchresults > div {
@@ -695,4 +769,11 @@ a {
     box-shadow: 0 2px 8px rgba(0,0,0,0.4);
     padding: 1%;
     box-sizing: border-box;
+}
+
+.searchresults > .inputHolder {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    margin: 0;
+    padding: 0;
+    background: none;
 }
