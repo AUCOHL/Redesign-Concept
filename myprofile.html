@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cloud V</title>
+        <link rel="stylesheet" type="text/css" href="Styles/style.css"></link>
+        <link rel="stylesheet" type="text/css" href="Styles/light.css"></link>
+    </head>
+    <body class='cloudy'>
+        <header>
+            <a href='index.html'><img src='Images/xxxs.png' class='logo' /></a>
+            <div class='headRight'>
+                <div class='search'>
+                    <div class='back'></div>
+                    <input placeholder='Search' />
+                </div><a href='myprofile.html' class='avatar'>
+                    <div class='back'></div>
+                    <div class='avatarImg' style='background-image: url(User/1.jpg);'></div>
+                </a>
+            </div>
+        </header>
+        <main>
+            <section class='profile'>
+                <button>Delete Profile</button>
+                <div class='icon' style='background-image: url(User/2.png);'></div>
+                <h2><input value='Karim'/></h2>
+                <textarea>Just a rather cool description.</textarea>
+            </section>
+            <h3 class='repoHeaderText'>Set New Password</h3>
+            <div class='table passInput'>
+                <input class='tableCell' placeholder='Old Password' />
+                <input class='tableCell' placeholder='New Password' />
+                <input class='tableCell' placeholder='Verify New Password' />
+                <input class='tableCell' type='submit' />
+            </div>
+            <h3 class='repoHeaderText'>My Repositories</h3>
+            <div class='table myRepos'>
+                <a href='' class='tableCell'>
+                    <div class='image'>
+                        <img class='avatar' src='Images/unknown.jpg' />
+                    </div><div class='text'>
+                        <h3>Barrel Shifter</h3>
+                        <p>An even better Barrel Shifter than Donkey Kong!</p>
+                    </div>
+                </a>
+                <a href='' class='tableCell'>
+                    <div class='image'>
+                        <img class='avatar' src='Images/unknown.jpg' />
+                    </div><div class='text'>
+                        <h3>RiscBee</h3>
+                        <p>A Barry good RISC-V RV32i Verilog implementation.</p>
+                    </div>
+                </a>
+                <a href='' class='tableCell'>
+                    <div class='image'>
+                        <img class='avatar' src='Images/unknown.jpg' />
+                    </div><div class='text'>
+                        <h3>MIPS Parallel Processor</h3>
+                        <p>Processor? I hardly even knew 'er!</p>
+                    </div>
+                </a>
+            </div>
+            </section>
+        </main><footer>
+            	&#169; 2017 CloudV <a href='explore.html'>Explore</a> <a href='blog.html'>Blog</a> <a href='about.html'>About</a>
+        </footer>
+        <script src="Scripts/frontend.js"></script>
+    </body>
+</html>

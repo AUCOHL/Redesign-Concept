@@ -32,7 +32,7 @@ header {
     padding: none;
     margin: none;
     transition: all 0.5s ease;
-    box-shadow: 0 1px 32px black;
+    box-shadow: 0 1px 32px rgba(0,0,0,0.4);
 }
 
 header .headRight {
@@ -42,12 +42,12 @@ header .headRight {
     box-shadow: 0 0 16px rgba(0,0,0,0.2);
 }
 
-header .headRight > div {
+header .headRight > div, header .headRight > a {
     position: relative;
     transition: border 0.5s ease;
 }
 
-header .headRight > div .back {
+header .headRight .back {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -57,7 +57,7 @@ header .headRight > div .back {
     transition: height 0.3s ease, background-color 0.3s ease;
 }
 
-header .headRight > div:hover .back {
+header .headRight > div:hover .back, header .headRight > a:hover .back {
     height: 100%;
     background: #69c5df;
 }
@@ -66,6 +66,10 @@ header .search {
     display: inline-block;
     height: 60px;
     vertical-align: top;
+}
+
+header .logo {
+    margin: 16px;
 }
 
 header .headRight input {
@@ -93,19 +97,6 @@ header .headRight input {
     z-index: 1;
 }
 
-header .headLeft {
-    position: absolute;
-    left: 232px;
-    top: 0;
-}
-
-header .headLeft a {
-    display: inline-block;
-    font-size: 1.2em;
-    padding: 20px;
-	font-family: 'HelveticaNeue', 'Helvetica', 'Calibri';
-}
-
 header .headRight input:focus {
     width: 15vw;
     padding-right: 12px;
@@ -127,6 +118,33 @@ header .avatarImg {
     background-position: center;
     position: relative;
     z-index: 1;
+}
+
+footer {
+    margin: 32px 10%;
+    width: 80%;
+    padding: 1em;
+    box-shadow: inset 0 -16px 16px -16px rgba(47, 128, 150, 0.3);
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    border-radius: 1em;
+    color: #666;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    box-sizing: border-box;
+    transition: 0.5s ease box-shadow;
+}
+
+footer:hover {
+    box-shadow: inset 0 -32px 32px -32px rgba(47, 128, 150, 0.9);
+}
+
+footer a {
+    margin: 0 2em;
+}
+
+.footer404 {
+    position: absolute;
+    bottom: 0;
 }
 
 .fourofour {
@@ -155,13 +173,8 @@ header .avatarImg {
     display: inline-block;
 }
 
-header > img {
-    margin: 16px;
-}
-
 main {
     width: 100%;
-    min-height: 100vh;
 }
 
 a {
@@ -246,6 +259,58 @@ aside {
     margin-bottom: 8px;
 }
 
+.alertDiv button {
+    border-radius: 0 4px 4px 0;
+}
+
+.alertDiv button.alt {
+    border-radius: 4px 0 0 4px;
+}
+
+textarea {
+    background: none;
+    border: none;
+    text-decoration: underline;
+}
+
+.profile {
+    width: 80%;
+    margin: 0 10%;
+    margin-top: 80px;
+    padding: 2.5em;
+    display: inline-block;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.profile textarea {
+    resize: y-resize;
+}
+
+.myRepos {
+    width: 80%;
+    margin: 16px 10% 0 10%;
+}
+
+.repoHeaderText {
+    width: 80%;
+    margin: 32px 10%;
+    text-align: center;
+}
+
+.profile > button, .profile > .dropdown {
+    margin-left: 0.2em;
+    float: right;
+    font-family: Calibri;
+}
+
+.profile button {
+    font-family: Calibri;
+    width: auto;
+    padding: 0.7em 1.2em;
+    font-size: 80%;
+}
+
 .updatesSection > div > div, aside > div > div {
     display: block;
     font-family: Calibri;
@@ -282,7 +347,7 @@ aside {
 .repoHeader button {
     font-family: Calibri;
     width: auto;
-    padding: 0.8em 1.2em;
+    padding: 0.7em 1.2em;
     font-size: 80%;
 }
 
@@ -351,16 +416,25 @@ a {
     display: inline-block;
     border-radius: 8px;
     box-sizing: border-box;
-    overflow: hidden;
 }
 
 .repoHeader {
     padding: 2.5em;
+    border-radius: 8px 8px 0 0;
 }
 
 .repoMain {
     margin-top: -8px;
     padding: 2.5em;
+}
+
+.noCommitGraph .repoMain {
+    margin-top: 0;
+}
+
+.noCommitGraph .repoHeader {
+    border-radius: 8px;
+    box-shadow: inset 0 -16px 32px -16px rgba(0,0,0,0.3);
 }
 
 .commitGraph {
@@ -381,7 +455,7 @@ a {
     display: inline-block;
 }
 
-.repository .icon {
+.repository .icon, .profile .icon, .myRepos .icon {
     display: inline-block;
     border-radius: 50%;
     width: 64px;
@@ -474,4 +548,151 @@ a {
     height: 1.0em;
     vertical-align: top;
     margin-right: 8px;
+}
+
+.table {
+	display: table;
+	border-collapse: separate;
+	border-spacing: 8px;
+}
+
+.tableCell {
+	display: table-cell;
+	border-spacing: 20px;
+	text-align: center;
+	font-family: 'HelveticaNeue', 'Helvetica', 'Calibri';
+	background: #efefef;
+	border-radius: 8px;
+	padding: 1%;
+	width: 24%;
+	margin: 0.5%;
+	box-sizing: border-box;
+	vertical-align: top;
+	box-shadow: 0 1px 8px rgba(0,0,0,0.4);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    position: relative;
+}
+
+.tableCell:hover {
+    transform: translate(0, 4px);
+	box-shadow: 0 1px 10px rgba(0,0,0,0.6);
+}
+
+.tableCell .image, .searchresults .image {
+	height: 80px;
+    height: 100%;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.tableCell .avatar, .searchresults .avatar {
+	width: 64px;
+	height: 64px;
+	margin: 16px 8px;
+	border-radius: 50%;
+    vertical-align: middle;
+}
+
+.tableCell .text, .searchresults .text {
+	vertical-align: top;
+	display: inline-block;
+	text-align: left;
+	width: calc(100% - 80px);
+}
+
+.tableCell h4 {
+	font-size: 100%;
+}
+
+.tableCellNone {
+    display: table-cell;
+    width: 33.33%;
+}
+
+.myRepos .tableCell {
+    width: 33.33%;
+}
+
+.passInput {
+    margin: 0 10%;
+    width: 80%;
+}
+
+.passInput input {
+    background: #f3f3f3;
+}
+
+.passInput input:hover {
+    transform: none;
+}
+
+.passInput input[type='submit'] {
+    background: #2f8096;
+    border: 1px solid #1f5563;
+    box-shadow: 0 0 6px rgba(0,0,0,0.2), inset 0 -2px 2px 0 rgba(0,0,0,0.2);
+    transition: background-color 0.5s ease;
+}
+
+.passInput input[type='submit']:hover {
+    background: #1f5563;
+}
+
+.profile input {
+    font-size: 160%;
+    font-weight: thin;
+    margin: 0;
+    padding: 0.3em;
+    font-family: 'Caviar Dreams', 'Helvetica';
+    background: none;
+    border: 0;
+    border-bottom: #333 2px solid;
+    display: block;
+    width: calc(100% - 192px);
+    box-sizing: border-box;
+    transition: 0.5s ease box-shadow;
+}
+
+.profile input:hover {
+    box-shadow: inset 0 -64px 64px -64px rgba(0,0,0,0.4);
+}
+
+.profile textarea {
+    width: 100%;
+    padding: 0.3em;
+    resize: vertical;
+    border-bottom: #333 2px solid;
+}
+
+.profile textarea:hover {
+    box-shadow: inset 0 -64px 64px -64px rgba(0,0,0,0.4);
+}
+
+.searchresults {
+    width: 80%;
+    margin: 0 10%;
+    padding-top: 80px;
+}
+
+.searchresults h2 {
+    text-align: center;
+    margin: 2% 0;
+}
+
+.searchresults > input {
+    width: 100%;
+    background-color: #efefef;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    padding: 1%;
+    font-size: 2em;
+    box-sizing: border-box;
+}
+
+.searchresults > div {
+    width: 100%;
+    background-color: #efefef;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    padding: 1%;
+    box-sizing: border-box;
 }

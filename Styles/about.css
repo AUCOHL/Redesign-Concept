@@ -1,41 +1,10 @@
 section {
-	padding: 8em;
-}
-
-.devTable {
-	text-align: center;
-	font-family: 'HelveticaNeue', 'Helvetica', 'Calibri';
-	margin: auto;
-}
-
-.devTable h4 {
-	font-size: 100%;
-}
-
-.devTable .avatar {
+	width: 80%;
+	margin: 0 10%;
+	margin-top: 80px;
+	padding: 2em;
 	display: inline-block;
-	position: relative;
-	width: 64px;
-	height: 64px;
-	border-radius: 50%;
-	box-shadow: 0 0 32px black, 0 -2px 2px rgba(0,0,0,0.2), 0 2px 2px rgba(255,255,255,0.2);
-	transition: 0.2s ease transform, 0.2s ease box-shadow;
-}
-
-.devTable .avatar:hover {
-	transform: scale(1.2);
-	box-shadow: 0 0 48px black, 0 -2px 2px rgba(0,0,0,0.2), 0 2px 4px rgba(255,255,255,0.2);
-}
-
-.devTable .image {
-	width:  80px;
-	height: 80px;
-}
-
-.devTable .text {
-	width:  200px;
-	height: 80px;
-	vertical-align: center;
-	text-align: left;
-	padding-left: 8px;
+	border-radius: 8px;
+	box-sizing: border-box;
+	overflow: hidden;
 }

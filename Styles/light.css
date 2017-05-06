@@ -25,9 +25,13 @@ header {
     box-shadow: 0 2px 16px rgba(0,0,0,0.2);
 }
 
-.repository {
-    background: #e9e9e9;
+.repository, .profile {
+    background: #f3f3f3;
     box-shadow: 0 2px 16px rgba(0,0,0,0.2);
+}
+
+.repoHeader {
+    background: #e9e9e9;
 }
 
 .commitGraph {
@@ -43,11 +47,6 @@ header {
     stroke: #ccc;
     stroke-width: 1;
 }
-
-.repoMain {
-    background: #f3f3f3;
-}
-
 .updatesSection > div > div, aside > div > div {
     background: #e9e9e9;
     color: #333;
