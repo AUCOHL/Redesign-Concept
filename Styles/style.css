@@ -175,6 +175,17 @@ footer a {
     vertical-align: top;
 }
 
+#addRepoContainer input[type='checkbox'] {
+    display: inline-block;
+    width: auto;
+    margin-bottom: 1em;
+}
+
+#addRepoContainer label {
+    color: white;
+    margin-bottom: 1em;
+}
+
 input, textarea {
     background: #f3f3f3;
     border: 1px solid #333;
