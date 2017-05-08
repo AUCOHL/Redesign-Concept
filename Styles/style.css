@@ -25,7 +25,7 @@ header.unscrolled .headRight {
     box-shadow: none;
 }
 
-header.unscrolled .headRight div {
+header.unscrolled .headRight > div {
     border-color: transparent;
 }
 
@@ -72,6 +72,7 @@ header .search {
     display: inline-block;
     height: 60px;
     vertical-align: top;
+    font-size: 0.7em;
 }
 
 header .logo {
@@ -174,7 +175,7 @@ footer a {
     vertical-align: top;
 }
 
-.login input, .login textarea {
+input, textarea {
     background: #f3f3f3;
     border: 1px solid #333;
     box-sizing: border-box;
@@ -188,11 +189,11 @@ footer a {
     transition: border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease;
 }
 
-.login input:hover, .login textarea:hover {
+input:hover, textarea:hover {
     background: #ddd;
 }
 
-.login input[type='submit'] {
+input[type='submit'] {
     background: #2f8096;
     border: 1px solid #1f5563;
     box-sizing: border-box;
@@ -203,7 +204,7 @@ footer a {
     box-shadow: 0 0 6px rgba(0,0,0,0.2), inset 0 -2px 2px 0 rgba(0,0,0,0.2);
 }
 
-.login input[type='submit']:hover {
+input[type='submit']:hover {
     background: #1f5563;
 }
 
@@ -939,4 +940,55 @@ input[type='file']:focus + label {
 .googlebtn:hover {
     background-color: #f3f3f3;
     color: black;
+}
+
+.editProfile {
+    width: 70%;
+    margin-left: 15%;
+    padding-top: 128px;
+    position: relative;
+}
+
+.editProfile textarea {
+    resize: vertical;
+}
+
+.editProfile input, .editProfile textarea {
+    font-size:  1em;
+    padding:  1.5em;
+}
+
+.editProfile .icon {
+    width:  96px;
+    height: 96px;
+    position: absolute;
+    top: 64px;
+    right: 0;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    margin: 0.5em 0;
+    box-shadow: 0 0 0 8px rgba(0,0,0,0.2);
+    transition: box-shadow 0.5s ease;
+}
+
+.editProfile .icon:hover {
+    box-shadow: 0 0 0 16px rgba(0,0,0,0.2);
+}
+
+.avatarDropdown {
+    position: absolute;
+    right: 0;
+    top: 60px;
+    background: #333;
+    padding: 1em;
+    z-index: 3;
+    width: 6em;
+    font-size: 1em;
+    color: white;
+}
+
+.avatarDropdown::before {
+    content: ' ';
 }

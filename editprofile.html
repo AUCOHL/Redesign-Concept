@@ -19,40 +19,24 @@
             </div>
         </header>
         <main>
-            <section class='profile'>
-                <a href='editprofile.html'><button>Edit Profile</button></a>
-                <div class='icon' style='background-image: url(User/1.jpg);'></div>
-                <h2><a href=''>KarimIO</a></h2>
-                <p>This is Karim's personal description ;)</p>
-            </section>
-            <h3 class='repoHeaderText'>My Repositories</h3>
-            <div class='table myRepos'>
-                <a href='' class='tableCell'>
-                    <div class='image'>
-                        <img class='avatar' src='Images/unknown.jpg' />
-                    </div><div class='text'>
-                        <h3>Barrel Shifter</h3>
-                        <p>An even better Barrel Shifter than Donkey Kong!</p>
-                    </div>
-                </a>
-                <a href='' class='tableCell'>
-                    <div class='image'>
-                        <img class='avatar' src='Images/unknown.jpg' />
-                    </div><div class='text'>
-                        <h3>RiscBee</h3>
-                        <p>A Barry good RISC-V RV32i Verilog implementation.</p>
-                    </div>
-                </a>
-                <a href='' class='tableCell'>
-                    <div class='image'>
-                        <img class='avatar' src='Images/unknown.jpg' />
-                    </div><div class='text'>
-                        <h3>MIPS Parallel Processor</h3>
-                        <p>Processor? I hardly even knew 'er!</p>
-                    </div>
-                </a>
-            </div>
-            </section>
+            <form class="editProfile">
+                Username: <br />
+                <input placeholder="Username" value="Karim" />
+                Description: <br />
+                <textarea placeholder="Description">This is Karim's personal description ;)</textarea>
+                <hr />
+                <br />
+                Set your profile picture
+                <div class='icon' style='background-image: url(User/1.jpg);'><input type='file' /><label></label></div>
+                <hr />
+                Old Password: <br />
+                <input placeholder="Old Password" type='password' />
+                New Password: <br />
+                <input placeholder="New Password" type='password' />
+                Verify new Password: <br />
+                <input placeholder="Verify New Password" type='password' />
+                <input type='submit' />
+            </form>
         </main><footer>
             	&#169; 2017 CloudV <a href='explore.html'>Explore</a> <a href='blog.html'>Blog</a> <a href='about.html'>About</a>
         </footer>
