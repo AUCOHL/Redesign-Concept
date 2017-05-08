@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cloud V</title>
+        <link rel="stylesheet" type="text/css" href="Styles/style.css"></link>
+        <link rel="stylesheet" type="text/css" href="Styles/light.css"></link>
+    </head>
+    <body class='cloudy'>
+		<button style='padding: 0.5em; margin: 0.5em; font-size: 100%; width: auto' id='normalToast'>Add Info Toast</button>
+		<button style='padding: 0.5em; margin: 0.5em; font-size: 100%; width: auto' id='successToast'>Add Success Toast</button>
+		<button style='padding: 0.5em; margin: 0.5em; font-size: 100%; width: auto' id='warningToast'>Add Warning Toast</button>
+		<button style='padding: 0.5em; margin: 0.5em; font-size: 100%; width: auto' id='errorToast'>Add Error Toast</button>
+		<script src="Scripts/frontend.js"></script>
+		<script>
+			// Test Toasts
+			document.getElementById("normalToast").onclick = function() {addToast("Hey, this is a test.", TOAST_INFO)};
+			document.getElementById("successToast").onclick = function() {addToast("Hey, this is a test.", TOAST_SUCC)};
+			document.getElementById("warningToast").onclick = function() {addToast("Hey, this is a test.", TOAST_WARN)};
+			document.getElementById("errorToast").onclick = function() {addToast("Hey, this is a test.", TOAST_ERRO)};
+		</script>
+    </body>
+</html>

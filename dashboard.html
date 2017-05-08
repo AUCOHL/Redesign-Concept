@@ -19,6 +19,15 @@
             </div>
         </header>
         <main>
+            <div id='addRepoContainer'>
+                <form class='login'>
+                    <button class='close'>X</button>
+                    <h2>Add Repository</h2>
+                    <input placeholder='Repository Name' /><br />
+                    <textarea placeholder="Repository Description"></textarea><br />
+                    <input type='submit' />
+                </form>
+            </div>
             <section class='updatesSection'>
                 <div class='alertDiv'>
                     <h3>Alerts</h3>
@@ -39,6 +48,7 @@
                     </div>
                 </div>
             </section><aside>
+                <button class='addRepo' onclick='addRepo'>+ Add repository</button>
                 <div>
                     <h3>Shared Projects</h3>
                     <div>
@@ -63,7 +73,6 @@
                         <p><a href=''>Skyus<a>/<a href=''>SignExtender</a></p>
                     </div>
                 </div>
-                <!-- <p>NOTE: We'll change the C and D to clone and download buttons later.</p> -->
             </aside>
         </main><footer>
             	&#169; 2017 CloudV <a href='explore.html'>Explore</a> <a href='blog.html'>Blog</a> <a href='about.html'>About</a>

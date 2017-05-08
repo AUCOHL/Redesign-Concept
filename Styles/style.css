@@ -129,7 +129,6 @@ footer {
     text-align: center;
     border-radius: 1em;
     color: #666;
-    text-shadow: 0 1px 3px rgba(0,0,0,0.3);
     box-sizing: border-box;
     transition: 0.5s ease box-shadow;
 }
@@ -170,7 +169,7 @@ footer a {
     vertical-align: top;
 }
 
-.login input {
+.login input, .login textarea {
     background: #f3f3f3;
     border: 1px solid #333;
     box-sizing: border-box;
@@ -185,7 +184,7 @@ footer a {
     transition: border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease;
 }
 
-.login input:hover {
+.login input:hover, .login textarea:hover {
     background: #ddd;
 }
 
@@ -245,6 +244,7 @@ button {
     transition: border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease;
     box-sizing: border-box;
     box-shadow: 0 0 6px rgba(0,0,0,0.2), inset 0 -2px 2px 0 rgba(0,0,0,0.2);
+    cursor: pointer;
 }
 
 button.alt {
@@ -322,12 +322,6 @@ button.alt:hover > img {
     filter:brightness(300%);
 }
 
-textarea {
-    background: none;
-    border: none;
-    text-decoration: underline;
-}
-
 .profile {
     width: 80%;
     margin: 0 10%;
@@ -339,6 +333,9 @@ textarea {
 }
 
 .profile textarea {
+    background: none;
+    border: none;
+    text-decoration: underline;
     resize: y-resize;
 }
 
@@ -820,4 +817,101 @@ input[type='file'] + label:hover {
 input[type='file']:focus + label {
 	outline: 1px dotted #000;
 	outline: -webkit-focus-ring-color auto 5px;
+}
+
+.addRepo {
+    border-radius: 6px;
+    font-size: 100%;
+    padding: 0.6em;
+    margin-bottom: 0.6em;
+}
+
+#addRepoContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    display: none;
+    z-index: 4;
+}
+
+#addRepoContainer.shown {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#addRepoContainer form {
+    width: 50%;
+    height: auto;
+    display: block;
+}
+
+#addRepoContainer input, #addRepoContainer textarea {
+    display: block;
+    width: 100%;
+    font-size: 1em;
+    padding: 1em;
+    margin: 0.2em;
+    box-sizing: border-box;
+}
+
+#addRepoContainer h2 {
+    color: white;
+    padding: 1em;
+}
+
+.close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: auto;
+    padding: 0.5em;
+    font-size: 1em;
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 50%;
+    border: 2px solid white;
+    box-shadow: 0 0px 16px rgba(0,0,0,0.4), inset 0 0px 16px rgba(0,0,0,0.4);
+    text-shadow: 0 0 4px black;
+    background: none;
+    transition: box-shadow 0.5s ease, border-color 0.5s ease, color 0.5s ease;
+}
+
+.close:hover {
+    background: none;
+    color: #ccc;
+    border: 2px solid #ccc;
+    box-shadow: 0 0px 24px rgba(0,0,0,0.6), inset 0 0px 24px rgba(0,0,0,0.6);
+}
+
+#toastHolder {
+    position: fixed;
+    bottom: 8px;
+    right: 8px;
+    left: 8px;
+}
+
+.successToast, .infoToast, .warningToast, .errorToast {
+    width: 100%;
+    border-radius: 6px;
+    font-size: 90%;
+    padding: 0.5em;
+    margin: 0.5em;
+    box-sizing: border-box;
+    background: #c00;
+}
+
+.successToast {
+    background: #9f9;
+}
+
+.infoToast {
+    background: #9cf;
+}
+
+.warningToast {
+    background: #fc9;
 }
