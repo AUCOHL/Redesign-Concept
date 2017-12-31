@@ -1,6 +1,7 @@
-#CloudV-Redesign
+# Cloud V Redesign
+A concept redesign for Cloud V by [@KarimIO](https://github.com/KarimIO).
 
-##Notes:
- - All "D" buttons in the dashboard should be replaced by a download icon.
- - Use repoTemp until commit history is implemented.
- - In search, a result should only appear once.
+It ended up being mostly unused after the designer left the team, but some elements still remain in the current version of Cloud V.
+
+# License
+The design is available under CC-BY-SA.
